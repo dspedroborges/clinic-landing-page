@@ -16,6 +16,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function App() {
+  const slidesToShow =
+    window.innerWidth < 640 ? 1 :
+      window.innerWidth < 1024 ? 2 :
+        3;
+
   return (
     <div className="bg-gray-50">
       <Whatsapp />
@@ -42,6 +47,7 @@ function App() {
         description={content.whySection.description}
         images={content.whySection.images}
         achievements={content.whySection.achievements}
+        slidesToShow={slidesToShow}
       />
       <CardsSection
         title={content.cardsSection.title}
@@ -61,6 +67,7 @@ function App() {
       />
       <Testimonials
         testimonials={content.testimonials}
+        slidesToShow={slidesToShow}
       />
       <AboutSection
         title={content.about.title}
@@ -69,6 +76,7 @@ function App() {
       />
       <Gallery
         images={content.gallery.images}
+        slidesToShow={slidesToShow}
       />
       <Contact
         address={content.contact.address}

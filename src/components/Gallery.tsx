@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 
-export default function Gallery({ images }: { images: string[]}) {
+export default function Gallery({ images, slidesToShow }: { images: string[], slidesToShow: number }) {
   const settings = {
     dots: false,
     infinite: true,
@@ -9,13 +9,8 @@ export default function Gallery({ images }: { images: string[]}) {
     autoplaySpeed: 3000,
     cssEase: "linear",
     adaptiveHeight: true,
-    slidesToShow: 4,
+    slidesToShow,
     slidesToScroll: 1,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 3 } },
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } }
-    ]
   };
 
   return (

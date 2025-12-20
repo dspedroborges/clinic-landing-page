@@ -7,9 +7,11 @@ type Props = {
     description: string;
     images: string[];
     achievements: string[];
+    slidesToShow: number;
 }
 
-export default function WhySection({ title, description, images, achievements }: Props) {
+export default function WhySection({ title, description, images, achievements, slidesToShow }: Props) {
+
     const settings = {
         dots: true,
         infinite: true,
@@ -18,21 +20,7 @@ export default function WhySection({ title, description, images, achievements }:
         autoplaySpeed: 3000,
         cssEase: "linear",
         adaptiveHeight: true,
-        slidesToShow: 4,
-        responsive: [
-            {
-                breakpoint: 1280,
-                settings: { slidesToShow: 3 }
-            },
-            {
-                breakpoint: 1024,
-                settings: { slidesToShow: 2 }
-            },
-            {
-                breakpoint: 640,
-                settings: { slidesToShow: 1 }
-            }
-        ]
+        slidesToShow
     };
 
     return (

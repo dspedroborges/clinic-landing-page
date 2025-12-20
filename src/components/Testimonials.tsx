@@ -12,9 +12,10 @@ type TestimonialType = {
 
 type Props = {
     testimonials: TestimonialType[];
+    slidesToShow: number;
 };
 
-export default function Testimonials({ testimonials }: Props) {
+export default function Testimonials({ testimonials, slidesToShow }: Props) {
     const settings = {
         dots: true,
         infinite: true,
@@ -23,11 +24,7 @@ export default function Testimonials({ testimonials }: Props) {
         autoplaySpeed: 4000,
         cssEase: "linear",
         adaptiveHeight: true,
-        slidesToShow: 3,
-        responsive: [
-            { breakpoint: 1024, settings: { slidesToShow: 2 } },
-            { breakpoint: 640, settings: { slidesToShow: 1 } }
-        ]
+        slidesToShow
     };
 
     return (
