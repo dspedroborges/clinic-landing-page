@@ -1,6 +1,4 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export default function Gallery({ images }: { images: string[]}) {
   const settings = {
@@ -27,7 +25,7 @@ export default function Gallery({ images }: { images: string[]}) {
           <div key={i} className="px-2 flex justify-center">
             <img
               src={img}
-              className="block max-w-full h-auto rounded-lg"
+              className="block max-w-full h-auto rounded-lg mx-auto"
             />
           </div>
         ))}

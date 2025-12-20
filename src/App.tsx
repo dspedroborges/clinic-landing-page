@@ -12,10 +12,10 @@ import Testimonials from "./components/Testimonials"
 import Whatsapp from "./components/Whatsapp"
 import WhySection from "./components/WhySection"
 import { content } from "./content"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
-  console.log(content);
-
   return (
     <div className="bg-gray-50">
       <Whatsapp />

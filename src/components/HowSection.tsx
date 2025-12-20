@@ -10,6 +10,7 @@ export default function HowSection({ title, description, videoSrc }: { title: st
                     className="relative z-10 h-[500px] rounded-xl"
                     src={videoSrc}
                     playsInline
+                    controls
                 />
             </div>
             <div className="lg:w-1/3">
