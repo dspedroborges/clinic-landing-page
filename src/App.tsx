@@ -1,0 +1,82 @@
+// import Hero from "./components/Hero"
+import AboutSection from "./components/AboutSection"
+import Button from "./components/Button"
+import CardsSection from "./components/CardsSection"
+import Checks from "./components/Checks"
+import Contact from "./components/Contact"
+import Gallery from "./components/Gallery"
+import HeroVideo from "./components/HeroVideo"
+import HowSection from "./components/HowSection"
+import MiddleSection from "./components/MiddleSection"
+import Testimonials from "./components/Testimonials"
+import Whatsapp from "./components/Whatsapp"
+import WhySection from "./components/WhySection"
+import { content } from "./content"
+
+function App() {
+  console.log(content);
+
+  return (
+    <div className="bg-gray-50">
+      <Whatsapp />
+      {/* <Hero
+        logo="/logo.png"
+        title="Especialistas em Facetas e Lentes Dentárias em Vitória"
+        description="Transforme o seu sorriso com quem é referência em lentes e facetas no ES, com mais de 12.000 facetas e lentes realizadas em 13 Anos"
+        button={{ name: "Quero transformar o meu sorriso", link: "#" }}
+        backgroundImage="https://picsum.photos/id/35/1780"
+      /> */}
+      <HeroVideo
+        logo={content.hero.logo}
+        title={content.hero.title}
+        description={content.hero.description}
+        button={content.hero.button}
+        videoSrc={content.hero.fileSrc}
+      />
+      <Checks content={content.checks} />
+      <div className="flex items-center justify-center p-12">
+        <Button link={content.button.link} name={content.button.name} />
+      </div>
+      <WhySection
+        title={content.whySection.title}
+        description={content.whySection.description}
+        images={content.whySection.images}
+        achievements={content.whySection.achievements}
+      />
+      <CardsSection
+        title={content.cardsSection.title}
+        cards={content.cardsSection.cards}
+      />
+      <HowSection
+        title={content.howSection.title}
+        description={content.howSection.description}
+        videoSrc={content.howSection.videoSrc}
+      />
+      <MiddleSection
+        title={content.middleSection.title}
+        description={content.middleSection.description}
+        list={content.middleSection.list}
+        button={content.middleSection.button}
+        image={content.middleSection.image}
+      />
+      <Testimonials
+        testimonials={content.testimonials}
+      />
+      <AboutSection
+        title={content.about.title}
+        description={content.about.description}
+        image={content.about.image}
+      />
+      <Gallery
+        images={content.gallery.images}
+      />
+      <Contact
+        address={content.contact.address}
+        email={content.contact.email}
+        telephone={content.contact.telephone}
+      />
+    </div>
+  )
+}
+
+export default App
