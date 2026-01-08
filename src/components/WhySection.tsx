@@ -33,7 +33,7 @@ export default function WhySection({ title, description, images, achievements, s
                         <div key={i} className="flex justify-center">
                             <img
                                 src={img}
-                                className="block mx-auto max-w-full h-auto"
+                                className="block mx-auto max-w-full h-[300px]"
                             />
                         </div>
                     ))}

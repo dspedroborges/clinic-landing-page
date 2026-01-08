@@ -1,11 +1,9 @@
-// import Hero from "./components/Hero"
 import AboutSection from "./components/AboutSection"
 import Button from "./components/Button"
 import CardsSection from "./components/CardsSection"
 import Checks from "./components/Checks"
 import Contact from "./components/Contact"
 import Gallery from "./components/Gallery"
-import HeroVideo from "./components/HeroVideo"
 import HowSection from "./components/HowSection"
 import MiddleSection from "./components/MiddleSection"
 import Testimonials from "./components/Testimonials"
@@ -14,6 +12,7 @@ import WhySection from "./components/WhySection"
 import { content } from "./content"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Hero from "./components/Hero"
 
 function App() {
   const slidesToShow =
@@ -24,20 +23,20 @@ function App() {
   return (
     <div className="bg-gray-50">
       <Whatsapp />
-      {/* <Hero
-        logo="/logo.png"
-        title="Especialistas em Facetas e Lentes Dentárias em Vitória"
-        description="Transforme o seu sorriso com quem é referência em lentes e facetas no ES, com mais de 12.000 facetas e lentes realizadas em 13 Anos"
-        button={{ name: "Quero transformar o meu sorriso", link: "#" }}
-        backgroundImage="https://picsum.photos/id/35/1780"
-      /> */}
-      <HeroVideo
+      <Hero
+        logo={content.hero.logo}
+        title={content.hero.title}
+        description={content.hero.description}
+        button={content.hero.button}
+        backgroundImage={content.hero.fileSrc}
+      />
+      {/* <HeroVideo
         logo={content.hero.logo}
         title={content.hero.title}
         description={content.hero.description}
         button={content.hero.button}
         videoSrc={content.hero.fileSrc}
-      />
+      /> */}
       <Checks content={content.checks} />
       <div className="flex items-center justify-center p-12">
         <Button link={content.button.link} name={content.button.name} />

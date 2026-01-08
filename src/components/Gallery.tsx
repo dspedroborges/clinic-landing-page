@@ -20,7 +20,7 @@ export default function Gallery({ images, slidesToShow }: { images: string[], sl
           <div key={i} className="px-2 flex justify-center">
             <img
               src={img}
-              className="block max-w-full h-auto rounded-lg mx-auto"
+              className="block max-w-full max-h-[300px] rounded-lg mx-auto"
             />
           </div>
         ))}
