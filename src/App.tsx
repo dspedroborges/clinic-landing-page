@@ -3,7 +3,6 @@ import Button from "./components/Button"
 import CardsSection from "./components/CardsSection"
 import Checks from "./components/Checks"
 import Contact from "./components/Contact"
-import Gallery from "./components/Gallery"
 import HowSection from "./components/HowSection"
 import MiddleSection from "./components/MiddleSection"
 import Testimonials from "./components/Testimonials"
@@ -72,10 +71,6 @@ function App() {
         title={content.about.title}
         description={content.about.description}
         image={content.about.image}
-      />
-      <Gallery
-        images={content.gallery.images}
-        slidesToShow={slidesToShow}
       />
       <Contact
         address={content.contact.address}
