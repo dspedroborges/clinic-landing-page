@@ -11,7 +11,7 @@ type Props = {
 
 export default function MiddleSection({ title, description, list, image, button }: Props) {
     return (
-        <div className="h-screen bg-linear-90 from-neutral-300 to-gray-100 w-full p-8 grid grid-cols-2 flex-col lg:flex-row justify-center items-center gap-4">
+        <div className="h-screen bg-linear-90 from-neutral-300 to-gray-100 w-full p-8 grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4">
             <img src={image} className="h-full rounded-xl" />
             <div className="p-4 flex flex-col items-center gap-4">
                 <h2 className="text-4xl text-center mx-auto">{title}</h2>
